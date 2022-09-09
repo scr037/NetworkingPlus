@@ -5,7 +5,7 @@ import XCTest
 
 final class APIClientRequestTests: XCTestCase {
   let config = APIClientConfiguration(
-    baseURL: { URL(string: "https://awoiaf.westeros.org/index.php/Main_Page")! },
+    baseURL: { URL(string: "https://awoiaf.westeros.org")! },
     httpHeaders: {
       [
         HTTPHeader(key: "header_1", value: "value_1"),

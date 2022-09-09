@@ -1,4 +1,4 @@
-GET https://awoiaf.westeros.org/index.php/Main_Page?another_query_item=another_value&appended_query_item=a_random_value&a_query_item=a_value
+GET https://awoiaf.westeros.org/some/path/?another_query_item=another_value&appended_query_item=a_random_value&a_query_item=a_value
 appended_header: yet_another_value
 header_1: value_1
 header_2: value_2

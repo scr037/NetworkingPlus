@@ -1,4 +1,4 @@
-POST https://awoiaf.westeros.org/index.php/Main_Page?appended_query_item=a_random_value&a_query_item=a_value&another_query_item=another_value
+POST https://awoiaf.westeros.org/some/path/?a_query_item=a_value&another_query_item=another_value&appended_query_item=a_random_value
 appended_header: yet_another_value
 header_1: value_1
 header_2: value_2

@@ -6,7 +6,7 @@ final class NetworkingClientTests: XCTestCase {
   func testEmptyResponse() async throws {
     let apiClient: APIClient = .stub(
       configuration: .init(
-        baseURL: { URL(string: "https://awoiaf.westeros.org/index.php/Main_Page")! },
+        baseURL: { URL(string: "https://awoiaf.westeros.org")! },
         httpHeaders: { [] },
         queryItems: { [] }
       ),
@@ -32,7 +32,7 @@ final class NetworkingClientTests: XCTestCase {
     let value = "RESPONSE"
     let apiClient: APIClient = .stub(
       configuration: .init(
-        baseURL: { URL(string: "https://awoiaf.westeros.org/index.php/Main_Page")! },
+        baseURL: { URL(string: "https://awoiaf.westeros.org")! },
         httpHeaders: { [] },
         queryItems: { [] }
       ),
@@ -64,7 +64,7 @@ final class NetworkingClientTests: XCTestCase {
     let value = Mock(id: "1", name: "First Mock", index: 0, metadata: ["Use": "Testing"])
     let apiClient: APIClient = .stub(
       configuration: .init(
-        baseURL: { URL(string: "https://awoiaf.westeros.org/index.php/Main_Page")! },
+        baseURL: { URL(string: "https://awoiaf.westeros.org")! },
         httpHeaders: { [] },
         queryItems: { [] }
       ),
@@ -92,7 +92,7 @@ final class NetworkingClientTests: XCTestCase {
     
     let apiClient: APIClient = .stub(
       configuration: .init(
-        baseURL: { URL(string: "https://awoiaf.westeros.org/index.php/Main_Page")! },
+        baseURL: { URL(string: "https://awoiaf.westeros.org")! },
         httpHeaders: { [] },
         queryItems: { [] }
       ),
@@ -130,7 +130,7 @@ final class NetworkingClientTests: XCTestCase {
     let data = someError.data(using: .utf8)
     let apiClient: APIClient = .stub(
       configuration: .init(
-        baseURL: { URL(string: "https://awoiaf.westeros.org/index.php/Main_Page")! },
+        baseURL: { URL(string: "https://awoiaf.westeros.org")! },
         httpHeaders: { [] },
         queryItems: { [] }
       ),

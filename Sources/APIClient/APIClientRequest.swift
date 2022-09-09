@@ -27,7 +27,7 @@ public struct APIClientRequest {
 extension APIClientRequest {
 
   public func requestFrom(configuration: APIClientConfiguration) -> URLRequest {
-    let url = configuration.baseURL().appendingPathExtension(self.resourcePath)
+    let url = configuration.baseURL().appendingPathComponent(self.resourcePath)
 
     guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
     else { fatalError("\(Self.self) cannot resolve url: \(url.absoluteString)") }
