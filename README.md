@@ -1,6 +1,6 @@
 # Networking+
 
-`Networking+` is a convenience wrapper of the Foundation's `URLSession` that allows loading data from the cloud. It offers many convenience abstractions to create request suitable for the most popular HTTP operations, response handlers, error handling and even stubbing possibilities to use in tests.
+`Networking+` is a convenience wrapper of the Foundation's `URLSession` that allows loading data from the cloud. It offers many convenience abstractions to create request suitable for the most popular HTTP operations, flexible response and error handlers and even stubbing possibilities for testing purposes.
 
 ## Caveats
 This package is aimed for personal projects that repeteadly need a Networking abstraction to consume data from the cloud. As such, it might not be fully functional for all networking needs. However, expect regular updates or feel free to contribute if you find it useful.
