@@ -11,9 +11,18 @@ extension APIClientConfiguration {
 }
 
 extension APIClient {
+  public static func mock(url: String) -> APIClient {
+    APIClient(
+      session: .init(configuration: .ephemeral),
+      configuration: .mock(urlString: url)
+    )
+  }
+
   public static var failing: APIClient {
     APIClient(
       session: .init(configuration: .ephemeral),
+      // This will fail because the URL will be empty. However:
+      // FIXME: Replace by failing or unimplemented implementation.
       configuration: .mock(urlString: "")
     )
   }
