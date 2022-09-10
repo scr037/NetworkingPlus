@@ -7,7 +7,7 @@ public struct APIClientConfiguration {
 }
 
 extension APIClientConfiguration {
-  public func `default`(
+  public static func `default`(
     baseURL: URL,
     httpHeaders: Set<HTTPHeader>,
     queryItems: Set<URLQueryItem>
