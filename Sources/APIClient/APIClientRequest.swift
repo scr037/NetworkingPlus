@@ -7,7 +7,7 @@ public struct APIClientRequest {
   private var httpHeaders: Set<HTTPHeader>
   private var httpBody: Data?
 
-  internal init(
+  public init(
     resourcePath: String,
     httpMethod: HTTPMethod,
     queryParameters: Set<URLQueryItem>,
@@ -55,7 +55,7 @@ extension APIClientRequest {
 
 extension APIClientRequest {
 
-  static func get(
+  public static func get(
     _ resourcePath: String,
     queryParams: Set<URLQueryItem> = [],
     httpHeaders: Set<HTTPHeader> = []
@@ -69,7 +69,7 @@ extension APIClientRequest {
     )
   }
 
-  static func post(
+  public static func post(
     _ resourcePath: String,
     queryParams: Set<URLQueryItem> = [],
     httpHeaders: Set<HTTPHeader> = []
@@ -83,7 +83,7 @@ extension APIClientRequest {
     )
   }
 
-  static func post<Body>(
+  public static func post<Body>(
     _ resourcePath: String,
     queryParams: Set<URLQueryItem> = [],
     httpHeaders: Set<HTTPHeader> = [],
@@ -99,7 +99,7 @@ extension APIClientRequest {
     )
   }
 
-  static func put(
+  public static func put(
     _ resourcePath: String,
     queryParams: Set<URLQueryItem> = [],
     httpHeaders: Set<HTTPHeader> = []
@@ -113,7 +113,7 @@ extension APIClientRequest {
     )
   }
   
-  static func put<Body>(
+  public static func put<Body>(
     _ resourcePath: String,
     queryParams: Set<URLQueryItem> = [],
     httpHeaders: Set<HTTPHeader> = [],
@@ -129,7 +129,7 @@ extension APIClientRequest {
     )
   }
 
-  static func delete(
+  public static func delete(
     _ resourcePath: String,
     queryParams: Set<URLQueryItem> = [],
     httpHeaders: Set<HTTPHeader> = []
@@ -143,7 +143,7 @@ extension APIClientRequest {
     )
   }
 
-  static func head(
+  public static func head(
     _ resourcePath: String,
     httpHeaders: Set<HTTPHeader> = []
   ) -> APIClientRequest {

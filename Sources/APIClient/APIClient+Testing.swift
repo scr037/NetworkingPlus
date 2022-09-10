@@ -1,7 +1,7 @@
 import Foundation
 
 extension APIClientConfiguration {
-  static func mock(urlString: String) -> APIClientConfiguration {
+  public static func mock(urlString: String) -> APIClientConfiguration {
     APIClientConfiguration(
       baseURL: { URL(string: urlString)! },
       httpHeaders: { [] },

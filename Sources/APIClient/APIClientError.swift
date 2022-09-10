@@ -19,8 +19,8 @@ public enum APIClientError: Swift.Error {
 }
 
 /// Error model to decode server side errors.
-struct ErrorResponse: Error, Codable {
-  var code: Int?
-  var message: String
-  var userInfo: [String: String?]?
+public struct ErrorResponse: Error, Codable {
+  public var code: Int?
+  public var message: String
+  public var userInfo: [String: String?]?
 }
