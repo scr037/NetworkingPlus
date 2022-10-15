@@ -26,4 +26,11 @@ extension APIClient {
     let output = try responseHandler.handleSuccess(data)
     return .success(output)
   }
+
+  public func responseHeaders(request: APIClientRequest) async throws -> [AnyHashable: Any]? {
+    let request = request.requestFrom(configuration: configuration)
+    let result = try await session.data(for:request)
+    guard let httpResponse = result.1 as? HTTPURLResponse else { return nil }
+    return httpResponse.allHeaderFields
+  }
 }

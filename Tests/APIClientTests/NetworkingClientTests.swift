@@ -27,6 +27,24 @@ final class NetworkingClientTests: XCTestCase {
       XCTFail("\(Self.self) shouldn't have received a failing result.")
     }
   }
+
+  func testResponseHeaders() async throws {
+    let apiClient: APIClient = .stub(
+      configuration: .init(
+        baseURL: { URL(string: "https://awoiaf.westeros.org")! },
+        httpHeaders: { [
+          .init(key: "any_header", value: "any_value")
+        ] },
+        queryItems: { [] }
+      ),
+      request: .get("/some/resource/path/"),
+      statusCode: 200,
+      data: nil
+    )
+
+    let result = try await apiClient.responseHeaders(request: .get("/some/resource/path/"))
+    XCTAssertEqual(result as! [String: String], ["any_header": "any_value"])
+  }
   
   func testResponseWithString() async throws {
     let value = "RESPONSE"
