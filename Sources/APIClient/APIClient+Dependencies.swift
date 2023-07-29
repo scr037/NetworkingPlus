@@ -2,7 +2,9 @@ import Dependencies
 
 public struct APIClientDependencyKey: TestDependencyKey {
   public static var testValue: APIClient = .failing
-  public static var previewValue: APIClient = .failing
+  public static var previewValue: APIClient = .mock(
+    url: "https://github.com/scr037/NetworkingPlus"
+  )
 }
 
 extension DependencyValues {
