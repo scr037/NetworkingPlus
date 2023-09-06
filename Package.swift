@@ -19,19 +19,13 @@ let package = Package(
   ],
   dependencies: [
     .package(
-      url: "git@github.com:pointfreeco/swift-composable-architecture.git", .upToNextMinor(from: "1.2.0")
-    ),
-    .package(
       url: "https://github.com/pointfreeco/swift-snapshot-testing",
       from: "1.11.1"
     ),
   ],
   targets: [
     .target(
-      name: "APIClient",
-      dependencies: [
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
-      ]
+      name: "APIClient"
     ),
     .testTarget(
       name: "APIClientTests",
