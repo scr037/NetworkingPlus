@@ -18,9 +18,9 @@ let package = Package(
     ),
   ],
   dependencies: [
-//    .package(
-//      url: "git@github.com:pointfreeco/swift-composable-architecture.git", .upToNextMinor(from: "1.2.0")
-//    ),
+    .package(
+      url: "git@github.com:pointfreeco/swift-composable-architecture.git", .upToNextMinor(from: "0.44.1")
+    ),
     .package(
       url: "https://github.com/pointfreeco/swift-snapshot-testing",
       from: "1.11.1"
@@ -30,7 +30,7 @@ let package = Package(
     .target(
       name: "APIClient",
       dependencies: [
-//        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
+        .product(name: "ComposableArchitecture", package: "swift-composable-architecture")
       ]
     ),
     .testTarget(
